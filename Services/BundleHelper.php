@@ -1,6 +1,6 @@
 <?php
 
-namespace Mickadoo\Yarnyard\Bundle\BaseDataBundle\Services;
+namespace Mickadoo\BaseDataBundle\Services;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;

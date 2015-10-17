@@ -1,6 +1,6 @@
 <?php
 
-namespace Mickadoo\Yarnyard\Bundle\BaseDataBundle\DependencyInjection;
+namespace Mickadoo\BaseDataBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

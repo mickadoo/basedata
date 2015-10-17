@@ -1,12 +1,12 @@
 <?php
 
-namespace Mickadoo\Yarnyard\Bundle\BaseDataBundle\Command;
+namespace Mickadoo\BaseDataBundle\Command;
 
 use Doctrine\DBAL\DBALException;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Mapping\MappingException;
-use Mickadoo\Yarnyard\Bundle\BaseDataBundle\Services\BundleHelper;
+use Mickadoo\BaseDataBundle\Services\BundleHelper;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

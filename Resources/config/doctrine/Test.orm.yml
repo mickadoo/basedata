@@ -1,4 +1,4 @@
-Mickadoo\Yarnyard\Bundle\BaseDataBundle\Entity\Test:
+Mickadoo\BaseDataBundle\Entity\Test:
   type: entity
   id:
     id:

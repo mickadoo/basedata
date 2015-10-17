@@ -1,5 +1,5 @@
 services:
   bundle.helper:
-    class: Mickadoo\Yarnyard\Bundle\BaseDataBundle\Services\BundleHelper
+    class: Mickadoo\BaseDataBundle\Services\BundleHelper
     arguments:
       - @kernel

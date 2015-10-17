@@ -1,11 +1,11 @@
 <?php
 
-namespace Mickadoo\Yarnyard\Bundle\BaseDataBundle\Tests\Command;
+namespace Mickadoo\BaseDataBundle\Tests\Command;
 
 use Doctrine\Bundle\DoctrineBundle\Command\Proxy\UpdateSchemaDoctrineCommand;
 use Doctrine\ORM\EntityRepository;
-use Mickadoo\Yarnyard\Bundle\BaseDataBundle\Command\LoadBaseDataCommand;
-use Mickadoo\Yarnyard\Bundle\BaseDataBundle\Entity\Test;
+use Mickadoo\BaseDataBundle\Command\LoadBaseDataCommand;
+use Mickadoo\BaseDataBundle\Entity\Test;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\Console\Input\ArrayInput;

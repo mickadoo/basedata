@@ -1,6 +1,6 @@
 <?php
 
-namespace Mickadoo\Yarnyard\Bundle\BaseDataBundle\Entity;
+namespace Mickadoo\BaseDataBundle\Entity;
 
 class Test
 {
