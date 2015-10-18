@@ -61,7 +61,7 @@ class LoadBaseDataCommand extends ContainerAwareCommand
         $this->output = $output;
         $this->input = $input;
         $this->entityManager = $this->getContainer()->get('doctrine.orm.default_entity_manager');
-        $this->bundleHelper = $this->getContainer()->get('bundle.helper');
+        $this->bundleHelper = $this->getContainer()->get('mickadoo_base_data.bundle.helper');
 
         /** @var ClassMetadata $metaData */
         foreach ($this->entityManager->getMetadataFactory()->getAllMetadata() as $metaData) {
