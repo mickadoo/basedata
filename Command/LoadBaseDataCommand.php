@@ -6,6 +6,9 @@ use Doctrine\DBAL\DBALException;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Mapping\MappingException;
+use Doctrine\ORM\OptimisticLockException;
+use Doctrine\ORM\ORMException;
+use Doctrine\ORM\TransactionRequiredException;
 use Mickadoo\BaseDataBundle\Services\BundleHelper;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -75,10 +78,10 @@ class LoadBaseDataCommand extends ContainerAwareCommand
      * @param OutputInterface $output
      * @return int
      * @throws DBALException
-     * @throws \Doctrine\Common\Persistence\Mapping\MappingException
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
-     * @throws \Doctrine\ORM\TransactionRequiredException
+     * @throws MappingException
+     * @throws ORMException
+     * @throws OptimisticLockException
+     * @throws TransactionRequiredException
      * @throws \Exception
      */
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -114,9 +117,9 @@ class LoadBaseDataCommand extends ContainerAwareCommand
      * @param array $listedIds
      * @param string $className
      * @throws DBALException
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
-     * @throws \Doctrine\ORM\TransactionRequiredException
+     * @throws ORMException
+     * @throws OptimisticLockException
+     * @throws TransactionRequiredException
      * @throws \Exception
      */
     private function removeUnlistedEntities(array $listedIds, $className)
