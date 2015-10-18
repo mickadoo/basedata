@@ -65,7 +65,7 @@ class LoadBaseDataCommand extends ContainerAwareCommand
 
         /** @var ClassMetadata $metaData */
         foreach ($this->entityManager->getMetadataFactory()->getAllMetadata() as $metaData) {
-            $bundleName = $this->bundleHelper->getBundleNameFromNamespace($metaData->getName());
+            $bundleName = $this->bundleHelper->getBundleFolderFromNamespace($metaData->getName());
             $this->entityClassesByBundle[$bundleName][] = $metaData->getReflectionClass();
         }
     }
@@ -170,7 +170,7 @@ class LoadBaseDataCommand extends ContainerAwareCommand
      */
     private function getReflectionClassForConfig($configFilePath)
     {
-        $bundleName = $this->bundleHelper->getBundleNameFromPath($configFilePath);
+        $bundleName = $this->bundleHelper->getBundleFolderFromPath($configFilePath);
         $endOfPath = substr($configFilePath, strpos($configFilePath, self::PATH_IN_BUNDLE));
         $configClassShortName = str_replace([self::PATH_IN_BUNDLE, self::CONFIG_PATH_SUFFIX], '', $endOfPath);
 

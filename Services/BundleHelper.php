@@ -44,7 +44,7 @@ class BundleHelper
      * @param $path
      * @return bool
      */
-    public function getBundleNameFromPath($path)
+    public function getBundleFolderFromPath($path)
     {
         $pattern = "#.*/(\w+Bundle)/.*#";
         preg_match($pattern, $path, $results);
@@ -53,13 +53,13 @@ class BundleHelper
     }
 
     /**
-     * @param $path
+     * @param $namespace
      * @return bool
      */
-    public function getBundleNameFromNamespace($path)
+    public function getBundleFolderFromNamespace($namespace)
     {
         $pattern = "#.*\\\(\w+Bundle)\\\.*#";
-        preg_match($pattern, $path, $results);
+        preg_match($pattern, $namespace, $results);
 
         return isset ($results[1]) ? $results[1] : null;
     }
