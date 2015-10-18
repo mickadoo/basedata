@@ -88,8 +88,12 @@ class LoadBaseDataCommand extends ContainerAwareCommand
         foreach ($configFilePaths as $configFilePath) {
 
             $configData = Yaml::parse($configFilePath);
-            $reflectionClass = $this->getReflectionClassForConfig($configFilePath);
 
+            if (!$configData || !is_array($configData)) {
+                continue;
+            }
+
+            $reflectionClass = $this->getReflectionClassForConfig($configFilePath);
             $this->removeUnlistedEntities(array_keys($configData), $reflectionClass->getName());
 
             foreach ($configData as $id => $entityData) {
