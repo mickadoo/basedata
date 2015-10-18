@@ -1,6 +1,6 @@
 services:
   mickadoo_base_data.bundle.helper:
     class: Mickadoo\BaseDataBundle\Services\BundleHelper
-    public: false
+    public: true
     arguments:
       - @kernel
